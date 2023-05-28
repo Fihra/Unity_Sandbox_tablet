@@ -18,6 +18,11 @@ public class TestEnemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
+    public int GetHealth()
+    {
+        return currentHealth;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -27,7 +32,7 @@ public class TestEnemy : MonoBehaviour
     private void DamageHealth(int damage)
     {
         currentHealth -= damage;
-        if(currentHealth < 0)
+        if(currentHealth <= 0)
         {
             Destroy(gameObject);
         }

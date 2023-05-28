@@ -29,10 +29,4 @@ public class Slash : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

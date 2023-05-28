@@ -24,7 +24,7 @@ public class AttackInputManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Z))
         {
-            Debug.Log("Attacking");
+            // Debug.Log("Attacking");
             RandomSlash();
  
         }
@@ -45,7 +45,7 @@ public class AttackInputManager : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
-            Debug.Log("Enemy in Range");
+            // Debug.Log("Enemy in Range");
         }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Pause_Menu_ui
   - Ally
   - Slash
+  - NumberDamageObject
   layers:
   - Default
   - TransparentFX

@@ -29,8 +29,26 @@ public class TestEnemy : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
     }
 
+    void ShowNumberDamage()
+    {
+
+    }
+
     private void DamageHealth(int damage)
     {
+        GameObject numberDamageObject = Instantiate(Resources.Load("NumberDamage") as GameObject);
+        
+        // numberDamageObject.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
+        numberDamageObject.transform.parent = transform.parent;
+        Debug.Log("My parent is: ", transform.parent);
+
+        numberDamageObject.transform.position = transform.position;
+
+        numberDamageObject.SetActive(true);
+
+        Destroy(numberDamageObject, 0.5f);
+        
         currentHealth -= damage;
         if(currentHealth <= 0)
         {

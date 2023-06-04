@@ -12,6 +12,9 @@ public class TestEnemy : MonoBehaviour
 
     private GameObject player;
 
+    [SerializeField]
+    private GameObject numberDamageObjectPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,14 +39,9 @@ public class TestEnemy : MonoBehaviour
 
     private void DamageHealth(int damage)
     {
-        GameObject numberDamageObject = Instantiate(Resources.Load("NumberDamage") as GameObject);
-        
-        // numberDamageObject.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        GameObject numberDamageObject = Instantiate(Resources.Load("NumberDamage") as GameObject, numberDamageObjectPoint.transform);
 
-        numberDamageObject.transform.parent = transform.parent;
-        Debug.Log("My parent is: ", transform.parent);
-
-        numberDamageObject.transform.position = transform.position;
+        // numberDamageObject.transform.position = transform.position;
 
         numberDamageObject.SetActive(true);
 

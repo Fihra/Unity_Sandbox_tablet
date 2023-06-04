@@ -40,12 +40,4 @@ public class AttackInputManager : MonoBehaviour
             Instantiate(slashAttack, attackBox.transform.position, Quaternion.Euler(new Vector3(0, 0, -45)));
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other) 
-    {
-        if(other.CompareTag("Enemy"))
-        {
-            // Debug.Log("Enemy in Range");
-        }
-    }
 }

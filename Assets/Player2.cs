@@ -14,6 +14,9 @@ public class Player2 : MonoBehaviour
     private Vector2 newPosition;
 
     [SerializeField]
+    private int attackPower = 1;
+
+    [SerializeField]
     private float moveSpeed = 1f;
 
     [SerializeField]
@@ -23,6 +26,11 @@ public class Player2 : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    public int GetAttackPower()
+    {
+        return attackPower;
     }
 
     private void RotateDirection()

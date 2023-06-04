@@ -35,7 +35,7 @@ public class HealthBar : MonoBehaviour
 
         if(transform.parent.GetComponent<TestEnemy>().GetHealth() < halfHealthCheck())
         {
-            Debug.Log("Yellow Warning");
+            // Debug.Log("Yellow Warning");
             healthColor.color = halfHealth;
         }
 

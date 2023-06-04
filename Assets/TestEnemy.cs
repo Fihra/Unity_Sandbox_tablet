@@ -50,6 +50,8 @@ public class TestEnemy : MonoBehaviour
         currentHealth -= damage;
         if(currentHealth <= 0)
         {
+            GameObject pointsManager = GameObject.Find("PointsManager");
+            pointsManager.GetComponent<PointsManager>().AddPoints();
             Destroy(gameObject);
         }
     }

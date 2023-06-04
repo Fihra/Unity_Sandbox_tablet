@@ -15,8 +15,14 @@ public class Slash : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    public void UpdateDamage()
+    {
+        damage++;
+    }
+
     public int GetDamage()
     {
+        Debug.Log("Attack Damage: " + damage);
         return damage;
     }
 
